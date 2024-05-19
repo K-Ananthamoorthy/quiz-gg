@@ -54,6 +54,7 @@ def signin():
         return render_template('signin.html', error="Invalid credentials")
     return render_template('signin.html')
 
+# Sign out route
 @app.route('/signout', methods=['POST'])
 def signout():
     session.pop('username', None)

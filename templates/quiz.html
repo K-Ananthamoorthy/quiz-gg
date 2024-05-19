@@ -1,29 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- <link rel="stylesheet" href="/static/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+                /* background-image: url("https://source.unsplash.com/random/1920x1080");  */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .start-screen,
+        .score-container {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #start-button,
+        #restart {
+            font-size: 20px;
+            background-color: rgb(59, 26, 26);
+            padding: 10px;
+            border-radius: 0.2em;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+            color: white;
+            width: 200px;
+            height: 60px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #start-button:hover,
+        #restart:hover {
+            transform: scale(1.05);
+        }
+
+        #restart {
+            margin-top: 0.9em;
+        }
+
+        #display-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Quiz background color */
+            padding: 1.5em;
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 0.6em;
+            font-size: 16px;
+            animation: fadeIn 1s ease-in-out;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Quiz box shadow */
+        }
+
+        .header {
+            margin-bottom: 1.8em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.6em;
+            border-bottom: 0.1em solid #c0bfd2;
+        }
+
+        .question {
+            margin-bottom: 1.25em;
+            font-weight: 600;
+        }
+
+        .option-div {
+            font-size: 0.9em;
+            width: 100%;
+            padding: 1em;
+            margin: 0.3em 0;
+            text-align: left;
+            outline: none;
+            background: transparent;
+            border: 1px solid #c0bfd2;
+            border-radius: 0.3em;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .option-div:hover {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .option-div:disabled {
+            color: #000000;
+            cursor: not-allowed;
+        }
+
+        #next-button {
+            font-size: 1em;
+            margin-top: 1.5em;
+            background-color: rgb(67, 27, 27);
+            color: #ffffff;
+            padding: 0.7em 1.8em;
+            border-radius: 0.3em;
+            float: right;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #next-button:hover {
+            transform: scale(1.05);
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .incorrect {
+            background-color: #ffdde0;
+            color: #d32f2f;
+            border-color: #d32f2f;
+        }
+
+        .correct {
+            background-color: #e7f6d5;
+            color: #689f38;
+            border-color: #689f38;
+        }
+
+        #user-score {
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        #user-score {
+            color: black;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        #answer-count {
+            margin-top: 1em;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .option-div {
+                font-size: 0.8em;
+            }
+
+            #start-button,
+            #restart {
+                font-size: 16px;
+                padding: 8px;
+                width: 150px;
+                height: 50px;
+            }
+
+            #next-button {
+                font-size: 0.8em;
+                padding: 0.5em 1.2em;
+            }
+        }
+
+        /* Add your CSS styles for the quiz container and other elements here */
+
+        .correct-answers {
+            margin-top: 1.5em;
+            padding: 1em;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+
+        .correct-answers h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .correct-answers ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .correct-answers ul li {
+            margin-bottom: 0.5em;
+        }
+
+        .correct-answers ul li::before {
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 0.5em;
+            color: #32CD32;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
     <title>SMVITM QUIZ</title>
 </head>
+
 <body>
     <div class="start-screen">
         <button id="start-button">Start</button>
     </div>
 
     <div id="display-container">
+
+
         <div class="header">
             <div class="number-of-count">
                 <span class="number-of-question">1 of 3 questions</span>
             </div>
+
         </div>
         <div id="container">
             <!-- questions and options will be displayed here -->
         </div>
         <button id="next-button" disabled>Next</button>
-    </div>
 
+
+    </div>
     <div class="score-container hide">
         <div id="user-score">Demo Score</div>
         <div class="correct-answers hide">
@@ -34,10 +271,11 @@
         </div>
         <div id="answer-count"></div>
         <button id="restart">Restart</button>
-    </div>
-
+        <form action="/signout" method="post">
+            <button type="submit">Sign Out</button>
+        </form>    </div>
     <script>
-        // References
+        //References
         let quizContainer = document.getElementById("container");
         let nextBtn = document.getElementById("next-button");
         let countOfQuestion = document.querySelector(".number-of-question");
@@ -54,26 +292,70 @@
         let count = 11;
         let countdown;
 
-        // Questions array (initially empty, will be filled with fetched data)
-        let quizArray = [];
+        //Questions and Options array
 
-        // Fetch questions from the API
-        async function fetchQuestions(topic) {
-            try {
-                const response = await fetch(`/api/questions/${topic}`);
-                const data = await response.json();
-                console.log('Fetched Questions:', data); // Debugging: Check the fetched data
-                if (Array.isArray(data) && data.length > 0) {
-                    quizArray = data;
-                    shuffle(quizArray);  // Shuffle questions after fetching
-                    initial();
-                } else {
-                    console.error('No questions found or data is not an array:', data);
-                }
-            } catch (error) {
-                console.error('Error fetching questions:', error);
-            }
-        }
+        let quizArray = [
+            {
+                id: "0",
+                question: "Which is the most widely spoken language in the world?",
+                options: ["Spanish", "Mandarin", "English", "German"],
+                correct: "Mandarin",
+            },
+            {
+                id: "1",
+                question: "Which is the only continent in the world without a desert?",
+                options: ["North America", "Asia", "Africa", "Europe"],
+                correct: "Europe",
+            },
+            {
+                id: "2",
+                question: "Who invented Computer?",
+                options: ["Charles Babbage", "Henry Luce", "Henry Babbage", "Charles Luce"],
+                correct: "Charles Babbage",
+            },
+            {
+                id: "3",
+                question: "What do you call a computer on a network that requests files from another computer?",
+                options: ["A client", "A host", "A router", "A web server"],
+                correct: "A client",
+            },
+            {
+                id: "4",
+                question: "Hardware devices that are not part of the main computer system and are often added later to the system.",
+                options: ["Peripheral", "Clip art", "Highlight", "Execute"],
+                correct: "Peripheral",
+            },
+            {
+                id: "5",
+                question: "The main computer that stores the files that can be sent to computers that are networked together is:",
+                options: ["Clip art", "Mother board", "Peripheral", "File server"],
+                correct: "File server",
+            },
+            {
+                id: "6",
+                question: "How can you catch a computer virus?",
+                options: ["Sending e-mail messages", "Using a laptop during the winter", "Opening e-mail attachments", "Shopping on-line"],
+                correct: "Opening e-mail attachments",
+            },
+            {
+                id: "7",
+                question: "Google (www.google.com) is a:",
+                options: ["Search Engine", "Number in Math", "Directory of images", "Chat service on the web"],
+                correct: "Search Engine",
+            },
+            {
+                id: "8",
+                question: "Which is not an Internet protocol?",
+                options: ["HTTP", "FTP", "STP", "IP"],
+                correct: "STP",
+            },
+            {
+                id: "9",
+                question: "Which of the following is not a valid domain name?",
+                options: ["www.yahoo.com", "www.yahoo.co.uk", "www.com.yahoo", "www.yahoo.co.in"],
+                correct: "www.com.yahoo",
+            },
+        ];
 
         // Shuffle function
         function shuffle(array) {
@@ -83,37 +365,57 @@
             }
         }
 
-        // Restart Quiz
+        // Shuffle questions
+        shuffle(quizArray);
+
+        //Restart Quiz
         restart.addEventListener("click", () => {
             initial();
             displayContainer.classList.remove("hide");
             scoreContainer.classList.add("hide");
         });
 
-        // Next Button
-        nextBtn.addEventListener("click", (displayNext = () => {
-            questionCount += 1;
-            if (questionCount == quizArray.length) {
-                displayContainer.classList.add("hide");
-                scoreContainer.classList.remove("hide");
-                userScore.innerHTML = `<h1>Your score is ${scoreCount} out of ${quizArray.length}</h1>`;
-                let answerDetails = "<div>";
-                for (let i = 0; i < quizArray.length; i++) {
-                    answerDetails += `<p>Question ${i + 1}: Correct Answer - ${quizArray[i].correct}</p>`;
+        //Next Button
+        nextBtn.addEventListener(
+            "click",
+            (displayNext = () => {
+                //increment questionCount
+                questionCount += 1;
+                //if last question
+                if (questionCount == quizArray.length) {
+                    //hide question container and display score
+                    displayContainer.classList.add("hide");
+                    scoreContainer.classList.remove("hide");
+                    //user score
+                    userScore.innerHTML =
+                        "<h1 >Your score is " + scoreCount + " out of " + quizArray.length + '</h1>';
+                    //answer count
+                    let answerDetails = "<div>";
+                    for (let i = 0; i < quizArray.length; i++) {
+                        answerDetails +=
+                            "<p>Question " +
+                            (i + 1) +
+                            ": Correct Answer - " +
+                            quizArray[i].correct +
+                            "</p>";
+                    }
+                    answerDetails += "</div>";
+                    answerCount.innerHTML = answerDetails;
+                } else {
+                    //display questionCount
+                    countOfQuestion.innerHTML =
+                        questionCount + 1 + " of " + quizArray.length + " Question";
+                    //display quiz
+                    quizDisplay(questionCount);
+                    count = 11;
+                    clearInterval(countdown);
+                    timerDisplay();
+                    nextBtn.disabled = true; // Disable next button after displaying next question
                 }
-                answerDetails += "</div>";
-                answerCount.innerHTML = answerDetails;
-            } else {
-                countOfQuestion.innerHTML = `${questionCount + 1} of ${quizArray.length} Question`;
-                quizDisplay(questionCount);
-                count = 11;
-                clearInterval(countdown);
-                timerDisplay();
-                nextBtn.disabled = true;
-            }
-        }));
+            })
+        );
 
-        // Timer
+        //Timer
         const timerDisplay = () => {
             countdown = setInterval(() => {
                 count--;
@@ -124,25 +426,32 @@
             }, 1000);
         };
 
-        // Display quiz
+        //Display quiz
         const quizDisplay = (questionCount) => {
             let quizCards = document.querySelectorAll(".container-mid");
+            //Hide other cards
             quizCards.forEach((card) => {
                 card.classList.add("hide");
             });
+            //display current question card
             quizCards[questionCount].classList.remove("hide");
         };
 
-        // Quiz Creation
+        //Quiz Creation
         function quizCreator() {
+            //generate quiz
             for (let i of quizArray) {
+                //quiz card creation
                 let div = document.createElement("div");
                 div.classList.add("container-mid", "hide");
-                countOfQuestion.innerHTML = `1 of ${quizArray.length} Question`;
+                //question number
+                countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
+                //question
                 let question_DIV = document.createElement("p");
                 question_DIV.classList.add("question");
                 question_DIV.innerHTML = i.question;
                 div.appendChild(question_DIV);
+                //options
                 div.innerHTML += `
                     <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
                     <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
@@ -153,16 +462,20 @@
             }
         }
 
-        // Checker Function
+        //Checker Function to check if option is correct or not
         function checker(userOption) {
             let userSolution = userOption.innerText;
-            let question = document.getElementsByClassName("container-mid")[questionCount];
+            let question =
+                document.getElementsByClassName("container-mid")[questionCount];
             let options = question.querySelectorAll(".option-div");
+
+            //if user clicked answer == correct option stored in object
             if (userSolution === quizArray[questionCount].correct) {
                 userOption.classList.add("correct");
                 scoreCount++;
             } else {
                 userOption.classList.add("incorrect");
+                //For marking the correct option
                 options.forEach((element) => {
                     if (element.innerText == quizArray[questionCount].correct) {
                         element.classList.add("correct");
@@ -170,17 +483,18 @@
                 });
                 wrongCount++;
             }
+
+            //clear interval(stop timer)
             clearInterval(countdown);
+            //disable all options
             options.forEach((element) => {
                 element.disabled = true;
             });
-            nextBtn.disabled = false;
+            nextBtn.disabled = false; // Enable next button after selection
         }
 
-        // Initial setup
+        //Initial setup
         function initial() {
-            console.log('Initial function called'); // Debugging
-            console.log('Quiz Array:', quizArray); // Debugging
             quizContainer.innerHTML = "";
             questionCount = 0;
             scoreCount = 0;
@@ -192,18 +506,21 @@
             quizDisplay(questionCount);
         }
 
-        // Start Button
+        //When user clicks on start button
         startButton.addEventListener("click", () => {
             startScreen.classList.add("hide");
             displayContainer.classList.remove("hide");
-            fetchQuestions('history'); // Fetch history questions initially
+            initial();
         });
 
-        // Window Load
+        //Hide quiz and display start screen
         window.onload = () => {
             startScreen.classList.remove("hide");
             displayContainer.classList.add("hide");
         };
+
+
     </script>
 </body>
+
 </html>
