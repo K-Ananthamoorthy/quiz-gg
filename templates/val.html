@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Valuation</title>
+    <style>body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#quiz-form {
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#valuation-result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00698f;
+}</style>
+</head>
+<body>
+    <h1>Quiz Valuation</h1>
+    <form id="quiz-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="score">Score:</label>
+        <input type="number" id="score" name="score"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="valuation-result"></div>
+
+    <script>const form = document.getElementById('quiz-form');
+const valuationResultElement = document.getElementById('valuation-result');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const score = parseInt(document.getElementById('score').value);
+    const valuation = calculateValuation(score);
+    displayValuationResult(name, valuation);
+});
+
+function calculateValuation(score) {
+    if (score >= 90) {
+        return 'Excellent';
+    } else if (score >= 70) {
+        return 'Good';
+    } else if (score >= 50) {
+        return 'Fair';
+    } else {
+        return 'Needs Improvement';
+    }
+}
+
+function displayValuationResult(name, valuation) {
+    valuationResultElement.textContent = name + "'s valuation: " + valuation;
+}</script>
+</body>
+</html>

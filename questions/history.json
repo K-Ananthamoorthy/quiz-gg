@@ -1,0 +1,165 @@
+[
+    {
+        "question": "Who was the first President of the United States?",
+        "answers": [
+            {"text": "George Washington", "correct": true},
+            {"text": "Thomas Jefferson", "correct": false},
+            {"text": "Abraham Lincoln", "correct": false},
+            {"text": "John Adams", "correct": false}
+        ]
+    },
+    {
+        "question": "What year did Christopher Columbus discover America?",
+        "answers": [
+            {"text": "1492", "correct": true},
+            {"text": "1776", "correct": false},
+            {"text": "1620", "correct": false},
+            {"text": "1519", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote the 'I Have a Dream' speech?",
+        "answers": [
+            {"text": "Martin Luther King Jr.", "correct": true},
+            {"text": "Abraham Lincoln", "correct": false},
+            {"text": "John F. Kennedy", "correct": false},
+            {"text": "Malcolm X", "correct": false}
+        ]
+    },
+    {
+        "question": "Who invented the telephone?",
+        "answers": [
+            {"text": "Alexander Graham Bell", "correct": true},
+            {"text": "Thomas Edison", "correct": false},
+            {"text": "Nikola Tesla", "correct": false},
+            {"text": "Benjamin Franklin", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "answers": [
+            {"text": "H2O", "correct": true},
+            {"text": "CO2", "correct": false},
+            {"text": "O2", "correct": false},
+            {"text": "CH4", "correct": false}
+        ]
+    },
+    {
+        "question": "Who developed the theory of relativity?",
+        "answers": [
+            {"text": "Albert Einstein", "correct": true},
+            {"text": "Isaac Newton", "correct": false},
+            {"text": "Galileo Galilei", "correct": false},
+            {"text": "Stephen Hawking", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the closest planet to the Sun?",
+        "answers": [
+            {"text": "Mercury", "correct": true},
+            {"text": "Venus", "correct": false},
+            {"text": "Mars", "correct": false},
+            {"text": "Earth", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the largest planet in our solar system?",
+        "answers": [
+            {"text": "Jupiter", "correct": true},
+            {"text": "Saturn", "correct": false},
+            {"text": "Uranus", "correct": false},
+            {"text": "Neptune", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "answers": [
+            {"text": "Au", "correct": true},
+            {"text": "Ag", "correct": false},
+            {"text": "Fe", "correct": false},
+            {"text": "Hg", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered penicillin?",
+        "answers": [
+            {"text": "Alexander Fleming", "correct": true},
+            {"text": "Louis Pasteur", "correct": false},
+            {"text": "Marie Curie", "correct": false},
+            {"text": "Robert Koch", "correct": false}
+        ]
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "answers": [
+            {"text": "Leonardo da Vinci", "correct": true},
+            {"text": "Pablo Picasso", "correct": false},
+            {"text": "Vincent van Gogh", "correct": false},
+            {"text": "Michelangelo", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of France?",
+        "answers": [
+            {"text": "Paris", "correct": true},
+            {"text": "Rome", "correct": false},
+            {"text": "Berlin", "correct": false},
+            {"text": "London", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'Romeo and Juliet'?",
+        "answers": [
+            {"text": "William Shakespeare", "correct": true},
+            {"text": "Charles Dickens", "correct": false},
+            {"text": "Jane Austen", "correct": false},
+            {"text": "Mark Twain", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "answers": [
+            {"text": "Tokyo", "correct": true},
+            {"text": "Kyoto", "correct": false},
+            {"text": "Osaka", "correct": false},
+            {"text": "Seoul", "correct": false}
+        ]
+    },
+    {
+        "question": "Who was the first man to walk on the moon?",
+        "answers": [
+            {"text": "Neil Armstrong", "correct": true},
+            {"text": "Buzz Aldrin", "correct": false},
+            {"text": "Yuri Gagarin", "correct": false},
+            {"text": "John Glenn", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for carbon?",
+        "answers": [
+            {"text": "C", "correct": true},
+            {"text": "Ca", "correct": false},
+            {"text": "Co", "correct": false},
+            {"text": "Cu", "correct": false}
+        ]
+    },
+    {
+        "question": "Who painted the ceiling of the Sistine Chapel?",
+        "answers": [
+            {"text": "Michelangelo", "correct": true},
+            {"text": "Leonardo da Vinci", "correct": false},
+            {"text": "Raphael", "correct": false},
+            {"text": "Donatello", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for sodium?",
+        "answers": [
+            {"text": "Na", "correct": true},
+            {"text": "S", "correct": false},
+            {"text": "So", "correct": false},
+            {"text": "Sn", "correct": false}
+        ]
+    }
+]
+

@@ -1,0 +1,488 @@
+[
+    {
+        "question": "What is the chemical symbol for water?",
+        "answers": [
+            {"text": "H2O", "correct": true},
+            {"text": "O2", "correct": false},
+            {"text": "CO2", "correct": false},
+            {"text": "H2", "correct": false}
+        ]
+    },
+    {
+        "question": "Who is known as the father of modern physics?",
+        "answers": [
+            {"text": "Isaac Newton", "correct": false},
+            {"text": "Albert Einstein", "correct": true},
+            {"text": "Galileo Galilei", "correct": false},
+            {"text": "Nikola Tesla", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the largest mammal in the world?",
+        "answers": [
+            {"text": "African Elephant", "correct": false},
+            {"text": "Giraffe", "correct": false},
+            {"text": "Blue Whale", "correct": true},
+            {"text": "Hippopotamus", "correct": false}
+        ]
+    },
+    {
+        "question": "Which planet is known as the 'Red Planet'?",
+        "answers": [
+            {"text": "Earth", "correct": false},
+            {"text": "Jupiter", "correct": false},
+            {"text": "Mars", "correct": true},
+            {"text": "Venus", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'The Wealth of Nations'?",
+        "answers": [
+            {"text": "Adam Smith", "correct": true},
+            {"text": "Karl Marx", "correct": false},
+            {"text": "John Locke", "correct": false},
+            {"text": "Friedrich Hayek", "correct": false}
+        ]
+    },
+    {
+        "question": "Which metal is liquid at room temperature?",
+        "answers": [
+            {"text": "Iron", "correct": false},
+            {"text": "Gold", "correct": false},
+            {"text": "Mercury", "correct": true},
+            {"text": "Copper", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "answers": [
+            {"text": "Sydney", "correct": false},
+            {"text": "Melbourne", "correct": false},
+            {"text": "Canberra", "correct": true},
+            {"text": "Brisbane", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the primary function of the mitochondria?",
+        "answers": [
+            {"text": "Cell Division", "correct": false},
+            {"text": "Energy Production", "correct": true},
+            {"text": "Protein Synthesis", "correct": false},
+            {"text": "DNA Replication", "correct": false}
+        ]
+    },
+    {
+        "question": "Who is credited with the discovery of penicillin?",
+        "answers": [
+            {"text": "Alexander Fleming", "correct": true},
+            {"text": "Louis Pasteur", "correct": false},
+            {"text": "Robert Koch", "correct": false},
+            {"text": "Edward Jenner", "correct": false}
+        ]
+    },
+    {
+        "question": "Which is the densest planet in the solar system?",
+        "answers": [
+            {"text": "Mercury", "correct": false},
+            {"text": "Earth", "correct": false},
+            {"text": "Venus", "correct": true},
+            {"text": "Mars", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the largest organ in the human body?",
+        "answers": [
+            {"text": "Heart", "correct": false},
+            {"text": "Brain", "correct": false},
+            {"text": "Liver", "correct": false},
+            {"text": "Skin", "correct": true}
+        ]
+    },
+    {
+        "question": "Who developed the theory of evolution by natural selection?",
+        "answers": [
+            {"text": "Charles Darwin", "correct": true},
+            {"text": "Gregor Mendel", "correct": false},
+            {"text": "Alfred Wallace", "correct": false},
+            {"text": "Thomas Huxley", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for iron?",
+        "answers": [
+            {"text": "Fe", "correct": true},
+            {"text": "Ir", "correct": false},
+            {"text": "In", "correct": false},
+            {"text": "Au", "correct": false}
+        ]
+    },
+    {
+        "question": "Who painted 'Starry Night'?",
+        "answers": [
+            {"text": "Vincent van Gogh", "correct": true},
+            {"text": "Pablo Picasso", "correct": false},
+            {"text": "Leonardo da Vinci", "correct": false},
+            {"text": "Claude Monet", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "answers": [
+            {"text": "São Paulo", "correct": false},
+            {"text": "Brasília", "correct": true},
+            {"text": "Rio de Janeiro", "correct": false},
+            {"text": "Salvador", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered the theory of general relativity?",
+        "answers": [
+            {"text": "Isaac Newton", "correct": false},
+            {"text": "Albert Einstein", "correct": true},
+            {"text": "Stephen Hawking", "correct": false},
+            {"text": "Nikola Tesla", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the smallest bone in the human body?",
+        "answers": [
+            {"text": "Femur", "correct": false},
+            {"text": "Stapes", "correct": true},
+            {"text": "Fibula", "correct": false},
+            {"text": "Humerus", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote '1984'?",
+        "answers": [
+            {"text": "George Orwell", "correct": true},
+            {"text": "Aldous Huxley", "correct": false},
+            {"text": "Ray Bradbury", "correct": false},
+            {"text": "J.D. Salinger", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for lead?",
+        "answers": [
+            {"text": "Pb", "correct": true},
+            {"text": "Ld", "correct": false},
+            {"text": "Le", "correct": false},
+            {"text": "Ld", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered radium and polonium?",
+        "answers": [
+            {"text": "Marie Curie", "correct": true},
+            {"text": "Albert Einstein", "correct": false},
+            {"text": "Niels Bohr", "correct": false},
+            {"text": "Ernest Rutherford", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of South Africa?",
+        "answers": [
+            {"text": "Cape Town", "correct": false},
+            {"text": "Johannesburg", "correct": false},
+            {"text": "Pretoria", "correct": true},
+            {"text": "Durban", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for silver?",
+        "answers": [
+            {"text": "Ag", "correct": true},
+            {"text": "Au", "correct": false},
+            {"text": "Al", "correct": false},
+            {"text": "Si", "correct": false}
+        ]
+    },
+    {
+        "question": "Who was the first woman to win a Nobel Prize?",
+        "answers": [
+            {"text": "Marie Curie", "correct": true},
+            {"text": "Rosalind Franklin", "correct": false},
+            {"text": "Ada Lovelace", "correct": false},
+            {"text": "Emmy Noether", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "answers": [
+            {"text": "Milan", "correct": false},
+            {"text": "Rome", "correct": true},
+            {"text": "Venice", "correct": false},
+            {"text": "Florence", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered gravity?",
+        "answers": [
+            {"text": "Isaac Newton", "correct": true},
+            {"text": "Galileo Galilei", "correct": false},
+            {"text": "Albert Einstein", "correct": false},
+            {"text": "Nikola Tesla", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "answers": [
+            {"text": "Indian Ocean", "correct": false},
+            {"text": "Atlantic Ocean", "correct": false},
+            {"text": "Arctic Ocean", "correct": false},
+            {"text": "Pacific Ocean", "correct": true}
+        ]
+    },
+    {
+        "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+        "answers": [
+            {"text": "Amelia Earhart", "correct": true},
+            {"text": "Beryl Markham", "correct": false},
+            {"text": "Harriet Quimby", "correct": false},
+            {"text": "Jacqueline Cochran", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "answers": [
+            {"text": "Montreal", "correct": false},
+            {"text": "Toronto", "correct": false},
+            {"text": "Ottawa", "correct": true},
+            {"text": "Vancouver", "correct": false}
+        ]
+    },
+    {
+        "question": "Who developed the theory of special relativity?",
+        "answers": [
+            {"text": "Albert Einstein", "correct": true},
+            {"text": "Isaac Newton", "correct": false},
+            {"text": "Galileo Galilei", "correct": false},
+            {"text": "Stephen Hawking", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the largest bird in the world?",
+        "answers": [
+            {"text": "Ostrich", "correct": true},
+            {"text": "Albatross", "correct": false},
+            {"text": "Eagle", "correct": false},
+            {"text": "Emu", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of China?",
+        "answers": [
+            {"text": "Beijing", "correct": true},
+            {"text": "Shanghai", "correct": false},
+            {"text": "Hong Kong", "correct": false},
+            {"text": "Guangzhou", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'To Kill a Mockingbird'?",
+        "answers": [
+            {"text": "Harper Lee", "correct": true},
+            {"text": "F. Scott Fitzgerald", "correct": false},
+            {"text": "John Steinbeck", "correct": false},
+            {"text": "Toni Morrison", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the smallest country in the world?",
+        "answers": [
+            {"text": "Monaco", "correct": false},
+            {"text": "Vatican City", "correct": true},
+            {"text": "Nauru", "correct": false},
+            {"text": "San Marino", "correct": false}
+        ]
+    },
+    {
+        "question": "Who developed the polio vaccine?",
+        "answers": [
+            {"text": "Jonas Salk", "correct": true},
+            {"text": "Albert Sabin", "correct": false},
+            {"text": "Edward Jenner", "correct": false},
+            {"text": "Louis Pasteur", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for potassium?",
+        "answers": [
+            {"text": "K", "correct": true},
+            {"text": "P", "correct": false},
+            {"text": "Pt", "correct": false},
+            {"text": "Ka", "correct": false}
+        ]
+    },
+    {
+        "question": "Who was the first woman to win a Nobel Prize?",
+        "answers": [
+            {"text": "Marie Curie", "correct": true},
+            {"text": "Rosalind Franklin", "correct": false},
+            {"text": "Ada Lovelace", "correct": false},
+            {"text": "Emmy Noether", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Russia?",
+        "answers": [
+            {"text": "St. Petersburg", "correct": false},
+            {"text": "Moscow", "correct": true},
+            {"text": "Kiev", "correct": false},
+            {"text": "Minsk", "correct": false}
+        ]
+    },
+    {
+        "question": "Who invented the light bulb?",
+        "answers": [
+            {"text": "Thomas Edison", "correct": true},
+            {"text": "Nikola Tesla", "correct": false},
+            {"text": "Alexander Graham Bell", "correct": false},
+            {"text": "Benjamin Franklin", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the longest river in the world?",
+        "answers": [
+            {"text": "Nile", "correct": true},
+            {"text": "Amazon", "correct": false},
+            {"text": "Mississippi", "correct": false},
+            {"text": "Yangtze", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for neon?",
+        "answers": [
+            {"text": "Ne", "correct": true},
+            {"text": "No", "correct": false},
+            {"text": "N", "correct": false},
+            {"text": "Na", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'The Catcher in the Rye'?",
+        "answers": [
+            {"text": "J.D. Salinger", "correct": true},
+            {"text": "F. Scott Fitzgerald", "correct": false},
+            {"text": "Ernest Hemingway", "correct": false},
+            {"text": "Mark Twain", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for hydrogen?",
+        "answers": [
+            {"text": "H", "correct": true},
+            {"text": "He", "correct": false},
+            {"text": "Ho", "correct": false},
+            {"text": "Hu", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered the process of pasteurization?",
+        "answers": [
+            {"text": "Louis Pasteur", "correct": true},
+            {"text": "Joseph Lister", "correct": false},
+            {"text": "Alexander Fleming", "correct": false},
+            {"text": "Robert Koch", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the largest species of big cat?",
+        "answers": [
+            {"text": "Lion", "correct": false},
+            {"text": "Tiger", "correct": true},
+            {"text": "Leopard", "correct": false},
+            {"text": "Jaguar", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the capital of Spain?",
+        "answers": [
+            {"text": "Madrid", "correct": true},
+            {"text": "Barcelona", "correct": false},
+            {"text": "Seville", "correct": false},
+            {"text": "Valencia", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered the theory of relativity?",
+        "answers": [
+            {"text": "Albert Einstein", "correct": true},
+            {"text": "Isaac Newton", "correct": false},
+            {"text": "Galileo Galilei", "correct": false},
+            {"text": "Stephen Hawking", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for nitrogen?",
+        "answers": [
+            {"text": "N", "correct": true},
+            {"text": "Ni", "correct": false},
+            {"text": "Na", "correct": false},
+            {"text": "Ne", "correct": false}
+        ]
+    },
+    {
+        "question": "Who is known as the 'Father of Modern Chemistry'?",
+        "answers": [
+            {"text": "Antoine Lavoisier", "correct": true},
+            {"text": "John Dalton", "correct": false},
+            {"text": "Dmitri Mendeleev", "correct": false},
+            {"text": "Robert Boyle", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for oxygen?",
+        "answers": [
+            {"text": "O", "correct": true},
+            {"text": "Oh", "correct": false},
+            {"text": "Ox", "correct": false},
+            {"text": "Om", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'The Great Gatsby'?",
+        "answers": [
+            {"text": "F. Scott Fitzgerald", "correct": true},
+            {"text": "Ernest Hemingway", "correct": false},
+            {"text": "John Steinbeck", "correct": false},
+            {"text": "Mark Twain", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the smallest planet in our solar system?",
+        "answers": [
+            {"text": "Mercury", "correct": true},
+            {"text": "Venus", "correct": false},
+            {"text": "Mars", "correct": false},
+            {"text": "Earth", "correct": false}
+        ]
+    },
+    {
+        "question": "Who discovered the electron?",
+        "answers": [
+            {"text": "J.J. Thomson", "correct": true},
+            {"text": "Ernest Rutherford", "correct": false},
+            {"text": "Niels Bohr", "correct": false},
+            {"text": "Marie Curie", "correct": false}
+        ]
+    },
+    {
+        "question": "What is the chemical symbol for silver?",
+        "answers": [
+            {"text": "Ag", "correct": true},
+            {"text": "Au", "correct": false},
+            {"text": "Si", "correct": false},
+            {"text": "Sr", "correct": false}
+        ]
+    },
+    {
+        "question": "Who wrote 'War and Peace'?",
+        "answers": [
+            {"text": "Leo Tolstoy", "correct": true},
+            {"text": "Fyodor Dostoevsky", "correct": false},
+            {"text": "Anton Chekhov", "correct": false},
+            {"text": "Vladimir Nabokov", "correct": false}
+        ]
+    }
+]
