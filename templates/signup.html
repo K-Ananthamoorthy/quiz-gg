@@ -4,115 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 320px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .error {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        p {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    h1 {
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 20px 0;
-    }
-    p {
-        margin: 20px 0;
-    }
-    form {
-        margin: 20px 0;
-    }
-    button {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    label {
-        display: inline-block;
-        width: 100px;
-        text-align: right;
-    }
-    input {
-        padding: 5px;
-        margin: 5px;
-    }
-    a {
-        text-decoration: none;
-        color: #4CAF50;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    button:hover {
-        background-color: #45a049;
-    }
-    button:active {
-        background-color: #45a049;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-    }
-    button:focus {
-        outline: none;
-    }
-    input:focus {
-        outline: none;
-    }
-    input[type="text"], input[type="password"] {
-        width: 200px;
-    }
-    input[type="submit"] {
-        width: 100px;
-    }
-    input[type="text"]:focus, input[type="password"]:focus {
-        border: 2px solid #4CAF50;
-    }
-    input[type="submit"]:focus {
-        border: 2px solid #45a049;
-    }
-    p {
-        font-size: 14px;
-    }
-    p a {
-        font-size: 16px;
-    }
-    p a:hover {
-        text-decoration: underline;
-    }
-    p a:active {
-        color: #45a049;
-    }
-    p a:focus {
-        outline: none;
-    }
-    p a:visited {
-        color: #4CAF50;
-    }
-    p a:visited:hover {
-        text-decoration: underline  ;
-    }
-</style>
 <body>
+    <div class="container">
     <h1>Sign Up</h1>
     <form action="{{ url_for('signup') }}" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
-        <br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
-        <br>
         <button type="submit">Sign Up</button>
     </form>
     {% if error %}
         <p style="color: red;">{{ error }}</p>
     {% endif %}
     <p>Already have an account? <a href="{{ url_for('signin') }}">Sign In</a></p>
+</div>
 </body>
 </html>
